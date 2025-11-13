@@ -1,0 +1,322 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package Vista;
+
+public class Vendedor extends javax.swing.JFrame {
+    
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Vendedor.class.getName());
+
+    public Vendedor() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jpVendedor = new javax.swing.JPanel();
+        lbUsuarioVen = new javax.swing.JLabel();
+        btnOrdenes = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        btnCatalogoV = new javax.swing.JButton();
+        btnCerrarSesionV = new javax.swing.JButton();
+        btnRepDeCompras = new javax.swing.JButton();
+        lbVendedor = new javax.swing.JLabel();
+        jpFondoVen = new javax.swing.JPanel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        imglogolabelV = new javax.swing.JLabel();
+        imgNotificacionV = new javax.swing.JLabel();
+        imglogoV = new javax.swing.JLabel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jlCrearCuenta1 = new javax.swing.JLabel();
+        btnCatalogoV1 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jlCrearCuenta3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jlCrearCuenta5 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jpVendedor.setBackground(new java.awt.Color(89, 89, 89));
+        jpVendedor.setPreferredSize(new java.awt.Dimension(253, 530));
+
+        lbUsuarioVen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Usuario logo.png"))); // NOI18N
+
+        btnOrdenes.setBackground(new java.awt.Color(153, 153, 153));
+        btnOrdenes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnOrdenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo musica.png"))); // NOI18N
+        btnOrdenes.setText("Órdenes de pedido");
+
+        btnCatalogoV.setBackground(new java.awt.Color(153, 153, 153));
+        btnCatalogoV.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCatalogoV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo audifonos.png"))); // NOI18N
+        btnCatalogoV.setText("Catálogo de vinilos");
+
+        btnCerrarSesionV.setBackground(new java.awt.Color(153, 153, 153));
+        btnCerrarSesionV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo salir.png"))); // NOI18N
+        btnCerrarSesionV.setText(" Cerrar sesión");
+        btnCerrarSesionV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionVActionPerformed(evt);
+            }
+        });
+
+        btnRepDeCompras.setBackground(new java.awt.Color(153, 153, 153));
+        btnRepDeCompras.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnRepDeCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo carrito.png"))); // NOI18N
+        btnRepDeCompras.setText("Reporte de compras");
+
+        lbVendedor.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        lbVendedor.setText("Vendedor");
+
+        javax.swing.GroupLayout jpVendedorLayout = new javax.swing.GroupLayout(jpVendedor);
+        jpVendedor.setLayout(jpVendedorLayout);
+        jpVendedorLayout.setHorizontalGroup(
+            jpVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpVendedorLayout.createSequentialGroup()
+                .addGroup(jpVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jpVendedorLayout.createSequentialGroup()
+                            .addGap(19, 19, 19)
+                            .addGroup(jpVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnCatalogoV, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnOrdenes, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnRepDeCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jpVendedorLayout.createSequentialGroup()
+                            .addGap(34, 34, 34)
+                            .addComponent(lbUsuarioVen))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpVendedorLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(btnCerrarSesionV)))
+                    .addGroup(jpVendedorLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(lbVendedor)))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        jpVendedorLayout.setVerticalGroup(
+            jpVendedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpVendedorLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(lbUsuarioVen, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbVendedor)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(btnCatalogoV, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnOrdenes, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnRepDeCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(btnCerrarSesionV, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jpVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jpFondoVen.setBackground(new java.awt.Color(51, 51, 51));
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        imglogolabelV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Letra soplisong.png"))); // NOI18N
+
+        imgNotificacionV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo noti.png"))); // NOI18N
+
+        imglogoV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/Logo PoliSong 150 px.png"))); // NOI18N
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setPreferredSize(new java.awt.Dimension(340, 377));
+
+        jlCrearCuenta1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jlCrearCuenta1.setForeground(new java.awt.Color(255, 255, 255));
+        jlCrearCuenta1.setText("Catálogo de vinilos");
+
+        btnCatalogoV1.setBackground(new java.awt.Color(204, 204, 204));
+        btnCatalogoV1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnCatalogoV1.setText("Agregar nuevo vinilo");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlCrearCuenta1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCatalogoV1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(358, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlCrearCuenta1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCatalogoV1)
+                .addContainerGap(264, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("tab1", jPanel1);
+
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+
+        jlCrearCuenta3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jlCrearCuenta3.setForeground(new java.awt.Color(255, 255, 255));
+        jlCrearCuenta3.setText("Órdenes de pedido");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlCrearCuenta3)
+                .addContainerGap(404, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jlCrearCuenta3)
+                .addContainerGap(287, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("tab3", jPanel3);
+
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+
+        jlCrearCuenta5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jlCrearCuenta5.setForeground(new java.awt.Color(255, 255, 255));
+        jlCrearCuenta5.setText("Órdenes de pedido");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jlCrearCuenta5)
+                .addContainerGap(393, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jlCrearCuenta5)
+                .addContainerGap(288, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("tab2", jPanel2);
+
+        javax.swing.GroupLayout jpFondoVenLayout = new javax.swing.GroupLayout(jpFondoVen);
+        jpFondoVen.setLayout(jpFondoVenLayout);
+        jpFondoVenLayout.setHorizontalGroup(
+            jpFondoVenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpFondoVenLayout.createSequentialGroup()
+                .addGroup(jpFondoVenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jpFondoVenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jpFondoVenLayout.createSequentialGroup()
+                            .addGap(269, 269, 269)
+                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jpFondoVenLayout.createSequentialGroup()
+                            .addGap(298, 298, 298)
+                            .addGroup(jpFondoVenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpFondoVenLayout.createSequentialGroup()
+                                    .addComponent(imglogoV, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(imglogolabelV, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(303, 303, 303)
+                                    .addComponent(imgNotificacionV, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        jpFondoVenLayout.setVerticalGroup(
+            jpFondoVenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpFondoVenLayout.createSequentialGroup()
+                .addGroup(jpFondoVenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpFondoVenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(imgNotificacionV, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpFondoVenLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(jpFondoVenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(imglogolabelV, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(imglogoV, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jpFondoVen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 530));
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCerrarSesionVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionVActionPerformed
+        Login log = new Login();
+        log.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnCerrarSesionVActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+            logger.log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> new Vendedor().setVisible(true));
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCatalogoV;
+    private javax.swing.JButton btnCatalogoV1;
+    private javax.swing.JButton btnCerrarSesionV;
+    private javax.swing.JButton btnOrdenes;
+    private javax.swing.JButton btnRepDeCompras;
+    private javax.swing.JLabel imgNotificacionV;
+    private javax.swing.JLabel imglogoV;
+    private javax.swing.JLabel imglogolabelV;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel jlCrearCuenta1;
+    private javax.swing.JLabel jlCrearCuenta3;
+    private javax.swing.JLabel jlCrearCuenta5;
+    private javax.swing.JPanel jpFondoVen;
+    private javax.swing.JPanel jpVendedor;
+    private javax.swing.JLabel lbUsuarioVen;
+    private javax.swing.JLabel lbVendedor;
+    // End of variables declaration//GEN-END:variables
+}
