@@ -49,12 +49,12 @@ public class Vendedor extends javax.swing.JFrame {
 
         btnOrdenes.setBackground(new java.awt.Color(153, 153, 153));
         btnOrdenes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnOrdenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo musica.png"))); // NOI18N
+        btnOrdenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo ordenes pedido.png"))); // NOI18N
         btnOrdenes.setText("Órdenes de pedido");
 
         btnCatalogoV.setBackground(new java.awt.Color(153, 153, 153));
         btnCatalogoV.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnCatalogoV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo audifonos.png"))); // NOI18N
+        btnCatalogoV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo vinilo.png"))); // NOI18N
         btnCatalogoV.setText("Catálogo de vinilos");
 
         btnCerrarSesionV.setBackground(new java.awt.Color(153, 153, 153));
@@ -68,7 +68,7 @@ public class Vendedor extends javax.swing.JFrame {
 
         btnRepDeCompras.setBackground(new java.awt.Color(153, 153, 153));
         btnRepDeCompras.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnRepDeCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo carrito.png"))); // NOI18N
+        btnRepDeCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo reporte compras.png"))); // NOI18N
         btnRepDeCompras.setText("Reporte de compras");
 
         lbVendedor.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
@@ -136,11 +136,17 @@ public class Vendedor extends javax.swing.JFrame {
 
         jlCrearCuenta1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jlCrearCuenta1.setForeground(new java.awt.Color(255, 255, 255));
-        jlCrearCuenta1.setText("Catálogo de vinilos");
+        jlCrearCuenta1.setText("Catálogo de productos");
 
         btnCatalogoV1.setBackground(new java.awt.Color(204, 204, 204));
         btnCatalogoV1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnCatalogoV1.setText("Agregar nuevo vinilo");
+        btnCatalogoV1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
+        btnCatalogoV1.setText("Agregar nuevo producto");
+        btnCatalogoV1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatalogoV1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -150,7 +156,7 @@ public class Vendedor extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jlCrearCuenta1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCatalogoV1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCatalogoV1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(358, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -160,7 +166,7 @@ public class Vendedor extends javax.swing.JFrame {
                 .addComponent(jlCrearCuenta1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCatalogoV1)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab1", jPanel1);
@@ -269,6 +275,14 @@ public class Vendedor extends javax.swing.JFrame {
         log.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnCerrarSesionVActionPerformed
+
+    private void btnCatalogoV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogoV1ActionPerformed
+        AgregarProducto prod = new AgregarProducto();
+        prod.setVisible(true);
+        prod.setLocationRelativeTo(null);
+        prod.setResizable(false); 
+        
+    }//GEN-LAST:event_btnCatalogoV1ActionPerformed
 
     /**
      * @param args the command line arguments
