@@ -10,7 +10,42 @@ public class Vendedor extends javax.swing.JFrame {
 
     public Vendedor() {
         initComponents();
+        
+        // Cursor tipo mano en el boton catalogo
+        btnCatalogoV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton ordenes
+        btnOrdenes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton reporte compras
+        btnRepDeCompras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton CerrarSesion
+        btnCerrarSesionV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton producto
+        btnProducto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        
+        // Ocultar las pestañas (tabs)
+        jTabbedPane1.setUI(new javax.swing.plaf.basic.BasicTabbedPaneUI() {
+            @Override
+            protected int calculateTabAreaHeight(int tabPlacement, int runCount, int maxTabHeight) {
+            return 0;
+            }
+        });
+
+        // Cambiar tabs con botones
+        btnCatalogoV.addActionListener(e -> jTabbedPane1.setSelectedIndex(0));
+        btnOrdenes.addActionListener(e -> jTabbedPane1.setSelectedIndex(1));
+        btnRepDeCompras.addActionListener(e -> jTabbedPane1.setSelectedIndex(2));
+        
+        // Ajuste de texto para botones del catálogo
+btnProducto.setText("<html><center>Agregar nuevo<br>producto</center></html>");
+ajustarTextoBoton(btnProducto1, 50);
+ajustarTextoBoton(btnProducto2, 50);
+
     }
+    private void ajustarTextoBoton(javax.swing.JButton boton, int ancho) {
+    String texto = boton.getText();
+    boton.setText("<html><div style='width:" + ancho + "px; text-align:center;'>" + texto + "</div></html>");
+}
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -33,9 +68,13 @@ public class Vendedor extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jlCrearCuenta1 = new javax.swing.JLabel();
-        btnCatalogoV1 = new javax.swing.JButton();
+        btnProducto = new javax.swing.JButton();
+        btnProducto1 = new javax.swing.JButton();
+        btnProducto2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jlCrearCuenta3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jlCrearCuenta5 = new javax.swing.JLabel();
 
@@ -55,7 +94,7 @@ public class Vendedor extends javax.swing.JFrame {
         btnCatalogoV.setBackground(new java.awt.Color(153, 153, 153));
         btnCatalogoV.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnCatalogoV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo vinilo.png"))); // NOI18N
-        btnCatalogoV.setText("Catálogo de vinilos");
+        btnCatalogoV.setText("Catálogo de productos");
 
         btnCerrarSesionV.setBackground(new java.awt.Color(153, 153, 153));
         btnCerrarSesionV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo salir.png"))); // NOI18N
@@ -138,13 +177,33 @@ public class Vendedor extends javax.swing.JFrame {
         jlCrearCuenta1.setForeground(new java.awt.Color(255, 255, 255));
         jlCrearCuenta1.setText("Catálogo de productos");
 
-        btnCatalogoV1.setBackground(new java.awt.Color(204, 204, 204));
-        btnCatalogoV1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnCatalogoV1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
-        btnCatalogoV1.setText("Agregar nuevo producto");
-        btnCatalogoV1.addActionListener(new java.awt.event.ActionListener() {
+        btnProducto.setBackground(new java.awt.Color(204, 204, 204));
+        btnProducto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnProducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
+        btnProducto.setText("Agregar nuevo producto");
+        btnProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatalogoV1ActionPerformed(evt);
+                btnProductoActionPerformed(evt);
+            }
+        });
+
+        btnProducto1.setBackground(new java.awt.Color(204, 204, 204));
+        btnProducto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnProducto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
+        btnProducto1.setText("Editar producto/Artista");
+        btnProducto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProducto1ActionPerformed(evt);
+            }
+        });
+
+        btnProducto2.setBackground(new java.awt.Color(204, 204, 204));
+        btnProducto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnProducto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
+        btnProducto2.setText("Eliminar producto/Artista");
+        btnProducto2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProducto2ActionPerformed(evt);
             }
         });
 
@@ -153,19 +212,26 @@ public class Vendedor extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jlCrearCuenta1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlCrearCuenta1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCatalogoV1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(358, Short.MAX_VALUE))
+                .addComponent(btnProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(btnProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(btnProducto2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jlCrearCuenta1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCatalogoV1)
+                .addGap(12, 12, 12)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnProducto)
+                    .addComponent(btnProducto2)
+                    .addComponent(btnProducto1))
                 .addContainerGap(252, Short.MAX_VALUE))
         );
 
@@ -177,21 +243,34 @@ public class Vendedor extends javax.swing.JFrame {
         jlCrearCuenta3.setForeground(new java.awt.Color(255, 255, 255));
         jlCrearCuenta3.setText("Órdenes de pedido");
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jlCrearCuenta3)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 627, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
                 .addComponent(jlCrearCuenta3)
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("tab3", jPanel3);
@@ -276,13 +355,21 @@ public class Vendedor extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnCerrarSesionVActionPerformed
 
-    private void btnCatalogoV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatalogoV1ActionPerformed
+    private void btnProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductoActionPerformed
         AgregarProducto prod = new AgregarProducto();
         prod.setVisible(true);
         prod.setLocationRelativeTo(null);
         prod.setResizable(false); 
         
-    }//GEN-LAST:event_btnCatalogoV1ActionPerformed
+    }//GEN-LAST:event_btnProductoActionPerformed
+
+    private void btnProducto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProducto1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnProducto1ActionPerformed
+
+    private void btnProducto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProducto2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnProducto2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -311,9 +398,11 @@ public class Vendedor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCatalogoV;
-    private javax.swing.JButton btnCatalogoV1;
     private javax.swing.JButton btnCerrarSesionV;
     private javax.swing.JButton btnOrdenes;
+    private javax.swing.JButton btnProducto;
+    private javax.swing.JButton btnProducto1;
+    private javax.swing.JButton btnProducto2;
     private javax.swing.JButton btnRepDeCompras;
     private javax.swing.JLabel imgNotificacionV;
     private javax.swing.JLabel imglogoV;
@@ -321,10 +410,12 @@ public class Vendedor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel jlCrearCuenta1;
     private javax.swing.JLabel jlCrearCuenta3;
     private javax.swing.JLabel jlCrearCuenta5;

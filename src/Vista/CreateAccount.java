@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package Vista;
 
 import Modelo.UsuarioDAO;
 import Modelo.login;
+import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 
 public class CreateAccount extends javax.swing.JFrame {
@@ -16,6 +13,16 @@ public class CreateAccount extends javax.swing.JFrame {
     public CreateAccount() {
         initComponents();
  
+        // Cursor tipo mano en el label de salir
+        imgSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        
+        // Cursor tipo mano en el boton registrar
+        btnRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        
+        // Agrupar radios
+        ButtonGroup grupo = new ButtonGroup();
+        grupo.add(rdbComprador);
+        grupo.add(rdbVendedor);
         
     }
 

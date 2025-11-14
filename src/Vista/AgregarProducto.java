@@ -18,6 +18,18 @@ public class AgregarProducto extends javax.swing.JFrame {
      */
     public AgregarProducto() {
         initComponents();
+        
+        // Cursor tipo mano en los botones añadir artista
+        btnAnadirArtista.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAnadirArtista1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton subir imagen
+        btnSubirImagen.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton agregar album
+        btnAgregarAlbum.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton asociar cancion
+        btnAsociarCan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        // Cursor tipo mano en el boton agregar cancion
+        btnAgregarCancion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
     }
 
     /**
@@ -311,7 +323,10 @@ public class AgregarProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbArtistaCanActionPerformed
 
     private void btnAnadirArtista1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirArtista1ActionPerformed
-        // TODO add your handling code here:
+        AñadirArtista art = new AñadirArtista();
+        art.setVisible(true);
+        art.setLocationRelativeTo(null);
+        art.setResizable(false); 
     }//GEN-LAST:event_btnAnadirArtista1ActionPerformed
 
     /**
