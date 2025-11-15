@@ -19,7 +19,7 @@ public class PoliSongStock {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             System.out.print("proyecto de mierda");
-            System.out.print("Yamid puto");
+            System.out.print("holaaa");
         }
     }
     
