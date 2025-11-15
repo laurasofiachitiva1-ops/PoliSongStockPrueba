@@ -3,7 +3,12 @@ package Modelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import java.util.List;
+import java.util.ArrayList;
+import java.sql.ResultSet;
+
 
 
 public class AutorDAO {
@@ -32,4 +37,30 @@ public class AutorDAO {
             }
         }        
     }
+    public List<String> obtenerAutores() {
+        List<String> lista = new ArrayList<>();
+        String sql = "SELECT nombre FROM autor";
+
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            lista.add(rs.getString("nombre"));
+        }
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.toString());
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+            System.out.println(e.toString());
+            }
+        }
+
+    return lista;
+}
+
 }

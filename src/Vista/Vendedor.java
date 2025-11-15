@@ -36,9 +36,9 @@ public class Vendedor extends javax.swing.JFrame {
         btnRepDeCompras.addActionListener(e -> jTabbedPane1.setSelectedIndex(2));
         
         // Ajuste de texto para botones del catálogo
-btnProducto.setText("<html><center>Agregar nuevo<br>producto</center></html>");
-ajustarTextoBoton(btnProducto1, 50);
-ajustarTextoBoton(btnProducto2, 50);
+        btnProducto.setText("<html><center>Agregar nuevo<br>producto/artista</center></html>");
+        ajustarTextoBoton(btnProducto1, 50);
+        ajustarTextoBoton(btnProducto2, 50);
 
     }
     private void ajustarTextoBoton(javax.swing.JButton boton, int ancho) {
@@ -180,7 +180,7 @@ ajustarTextoBoton(btnProducto2, 50);
         btnProducto.setBackground(new java.awt.Color(204, 204, 204));
         btnProducto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProducto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
-        btnProducto.setText("Agregar nuevo producto");
+        btnProducto.setText("Agregar nuevo producto/artista");
         btnProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProductoActionPerformed(evt);
@@ -190,7 +190,7 @@ ajustarTextoBoton(btnProducto2, 50);
         btnProducto1.setBackground(new java.awt.Color(204, 204, 204));
         btnProducto1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProducto1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
-        btnProducto1.setText("Editar producto/Artista");
+        btnProducto1.setText("Editar producto/artista");
         btnProducto1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProducto1ActionPerformed(evt);
@@ -200,7 +200,7 @@ ajustarTextoBoton(btnProducto2, 50);
         btnProducto2.setBackground(new java.awt.Color(204, 204, 204));
         btnProducto2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnProducto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logo mas.png"))); // NOI18N
-        btnProducto2.setText("Eliminar producto/Artista");
+        btnProducto2.setText("Eliminar producto/artista");
         btnProducto2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProducto2ActionPerformed(evt);

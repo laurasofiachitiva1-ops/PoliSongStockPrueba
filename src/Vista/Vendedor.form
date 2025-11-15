@@ -346,7 +346,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Img/logo mas.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Agregar nuevo producto"/>
+                    <Property name="text" type="java.lang.String" value="Agregar nuevo producto/artista"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProductoActionPerformed"/>
@@ -363,7 +363,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Img/logo mas.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Editar producto/Artista"/>
+                    <Property name="text" type="java.lang.String" value="Editar producto/artista"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProducto1ActionPerformed"/>
@@ -380,7 +380,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Img/logo mas.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Eliminar producto/Artista"/>
+                    <Property name="text" type="java.lang.String" value="Eliminar producto/artista"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnProducto2ActionPerformed"/>
